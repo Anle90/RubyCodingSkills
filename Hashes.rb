@@ -67,7 +67,6 @@ b = [[1,"a"], [2, "b"]]
 b = z.to_h
 #  will return "{1 => "a", 2 => "b"}
 
-
 #Access hash using index value
 h = {1 => 5, 2 =>10, 3 => 15}
 h.keys
@@ -80,6 +79,14 @@ h.keys
 # Get hash values
 h = {1 => 5, 2 =>10, 3 => 15}
 h.values
+
+# Find hash with specific key 
+h = {1 => 5, 2 =>10, 3 => 15}
+h.select {|key, value| key == 1}
+
+# Find hash with specific value
+h = {1 => 5, 2 =>10, 3 => 15}
+h.select {|key, value| value == 5}
  
 
 
